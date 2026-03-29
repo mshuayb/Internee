@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Weather App</title>
+
+    <!--CSS File Link-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="weather-card">
+        <div class="search-box">
+            <!-- 'list' attribute links to the datalist below -->
+            <input type="text" id="cityInput" placeholder="Search Pakistani City..." list="pk-cities" autocomplete="off">
+            
+            <button class="btn-search" id="searchBtn" aria-label="Search">🔍</button>
+            <button class="btn-location" id="locationBtn" aria-label="Use my location">📍</button>
+        </div>
+
+        <!-- Data List for Autocomplete (Contains Pakistani Cities) -->
+        <datalist id="pk-cities">
+            <option value="Karachi">
+            <option value="Lahore">
+            <option value="Faisalabad">
+            <option value="Rawalpindi">
+            <option value="Multan">
+            <option value="Hyderabad">
+            <option value="Gujranwala">
+            <option value="Peshawar">
+            <option value="Quetta">
+            <option value="Islamabad">
+            <option value="Sialkot">
+            <option value="Sargodha">
+            <option value="Bahawalpur">
+            <option value="Sukkur">
+            <option value="Larkana">
+            <option value="Mardan">
+            <option value="Mingora">
+            <option value="Sheikhupura">
+            <option value="Sahiwal">
+            <option value="Dera Ghazi Khan">
+            <option value="Rahim Yar Khan">
+            <option value="Jhang">
+            <option value="Gujrat">
+            <option value="Kasur">
+            <option value="Okara">
+            <option value="Mianwali">
+            <option value="Bhimber">
+            <option value="Mirpur">
+            <option value="Muzaffarabad">
+            <option value="Gilgit">
+            <option value="Skardu">
+            <option value="Chitral">
+            <option value="Swat">
+            <option value="Hunza">
+            <option value="Kaghan">
+            <option value="Naran">
+            <option value="Murree">
+            <option value="Abbottabad">
+            <option value="Haripur">
+            <option value="Mansehra">
+            <option value="Chakwal">
+            <option value="Jhelum">
+            <option value="Attock">
+            <option value="Pakpattan">
+            <option value="Toba Tek Singh">
+            <option value="Kamoke">
+            <option value="Hafizabad">
+            <option value="Mandi Bahauddin">
+            <option value="Wazirabad">
+            <option value="Chiniot">
+            <option value="Sambrial">
+            <option value="Narowal">
+            <option value="Hujra Shah Muqeem">
+            <option value="Kabirwala">
+            <option value="Khanewal">
+            <option value="Vehari">
+            <option value="Dipalpur">
+            <option value="Khanpur">
+            <option value="Jaranwala">
+            <option value="Chishtian">
+            <option value="Burewala">
+            <option value="Arifwala">
+            <option value="Jahania">
+            <option value="Lodhran">
+            <option value="Shujabad">
+            <option value="Kot Addu">
+            <option value="Muzaffargarh">
+            <option value="Alipur">
+            <option value="Kot Mumin">
+            <option value="Shorkot">
+            <option value="Ahmadpur East">
+            <option value="Yazman">
+            <option value="Ubaro">
+            <option value="Moro">
+            <option value="Kandhkot">
+            <option value="Jacobabad">
+            <option value="Shikarpur">
+            <option value="Kashmore">
+            <option value="Larkana">
+            <option value="Dadu">
+            <option value="Sehwan">
+            <option value="Jamshoro">
+            <option value="Kotri">
+            <option value="Thatta">
+            <option value="Badin">
+            <option value="Tando Muhammad Khan">
+            <option value="Tando Allahyar">
+            <option value="Matli">
+            <option value="Hyderabad">
+            <option value="Mirpur Khas">
+            <option value="Umerkot">
+            <option value="Sanghar">
+            <option value="Shahdadpur">
+            <option value="Nawabshah">
+            <option value="Padidan">
+            <option value="Naushahro Feroze">
+            <option value="Mor0">
+            <option value="Khipro">
+            <option value="Mehrabpur">
+            <option value="Noshero Feroz">
+            <option value="Ghotki">
+            <option value="Khairpur">
+            <option value="Sukkur">
+            <option value="Rohri">
+            <option value="Pano Aqil">
+            <option value="Saleh Pat">
+            <option value="Kandiaro">
+            <option value="Kamber">
+            <option value="Warah">
+            <option value="Qambar">
+            <option value="Larkana">
+            <option value="Shahdadkot">
+            <option value="Mirokhan">
+            <option value="Sohbatpur">
+            <option value="Usta Muhammad">
+            <option value="Jhat Pat">
+            <option value="Gandakha">
+            <option value="Bhag">
+            <option value="Dera Murad Jamali">
+            <option value="Sibi">
+            <option value="Bolan">
+            <option value="Mach">
+            <option value="Kuchlak">
+            <option value="Quetta">
+            <option value="Pishin">
+            <option value="Killa Abdullah">
+            <option value="Chaman">
+            <option value="Zhob">
+            <option value="Loralai">
+            <option value="Duki">
+            <option value="Harnai">
+            <option value="Sibi">
+            <option value="Kohlu">
+            <option value="Dera Bugti">
+            <option value="Turbat">
+            <option value="Gwadar">
+            <option value="Pasni">
+            <option value="Jiwani">
+            <option value="Ormara">
+            <option value="Panjgur">
+            <option value="Khuzdar">
+            <option value="Wadh">
+            <option value="Uthal">
+            <option value="Belapat">
+            <option value="Hub">
+            <option value="Lasbela">
+            <option value="Winder">
+        </datalist>
+
+        <!-- Quick Access Buttons for Major Cities -->
+        <div class="quick-cities">
+            <button class="city-chip" onclick="searchCity('Karachi')">Karachi</button>
+            <button class="city-chip" onclick="searchCity('Lahore')">Lahore</button>
+            <button class="city-chip" onclick="searchCity('Islamabad')">Islamabad</button>
+            <button class="city-chip" onclick="searchCity('Peshawar')">Peshawar</button>
+            <button class="city-chip" onclick="searchCity('Quetta')">Quetta</button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+        <div class="error-msg" id="errorMsg"></div>
+
+        <section class="weather-info" id="weatherInfo">
+            <div class="weather-icon" id="weatherIcon">☀️</div>
+            <h1 class="temperature" id="temp">--°C</h1>
+            <h2 class="city-name" id="cityName">City Name</h2>
+            <p class="description" id="description">Weather Condition</p>
+
+            <div class="details">
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span class="detail-value" id="humidity">--%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind</span>
+                    <span class="detail-value" id="windSpeed">-- km/h</span>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+     <!--JS File Link-->
+     <script src="script.js"></script>
+</body>
+</html>
