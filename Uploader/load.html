@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern File Uploader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+     <!--CSS File Link-->
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- =========================================
+         HTML STRUCTURE (Save as index.html)
+         ========================================= -->
+    
+    <div class="container">
+        <h2>File Uploader</h2>
+        
+        <!-- Drag & Drop Area -->
+        <div class="drag-area" id="drop-area">
+            <div class="icon">📂</div>
+            <span>Drag & Drop files here or</span>
+            <span class="browse-btn">browse</span>
+            <input type="file" id="file-input" hidden>
+        </div>
+
+        <!-- Progress & Preview Section -->
+        <div class="preview-container" id="preview-container">
+            <div class="progress-bar-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="status-text" id="status-text"></div>
+            
+            <div class="image-wrapper">
+                <img src="" alt="Preview" id="preview-image">
+            </div>
+        </div>
+
+        <!-- Gallery (Persisted Images) -->
+        <div class="gallery-section">
+            <div class="gallery-title">
+                Saved Images
+                <button class="clear-btn" id="clear-all">Clear All</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Images will be injected here via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Element -->
+    <div class="toast" id="toast">Message here</div>
+
+    <!--JS File Link-->
+    <script src="script.js"></script>
+</body>
+</html>
